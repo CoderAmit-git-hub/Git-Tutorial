@@ -149,6 +149,145 @@ function winBlur(){
 	 // Assures that the new window does NOT get focus
 }
 
+// number.reduce();
+let num_redc  = [5,10,15,25,30];
+let vote_redc = ['Yes','No','Yes','No','Absent'];
+
+let max = num_redc.reduce( (acc,val) => {
+	return Math.max(acc,val);
+} );
+
+console.log(max);
+
+console.log('============================');
+
+let product = [
+	{
+		name   : 'Pen',
+		amount : 5,
+		price  : 10
+	},
+	{
+		name   : 'Pencil',
+		amount : 10,
+		price  : 8
+	},
+	{
+		name   : 'Notebook',
+		amount : 2,
+		price  : 20
+	}
+];
+
+let prod_cal = product.reduce(proNum,0);
+
+function proNum( acc, iteam ){
+	return acc + iteam.amount * iteam.price;
+}
+
+console.log(prod_cal);
+
+console.log('=========================');
+
+let clas_num = [
+	{
+		name : 'Amit',
+		age  : 23,
+		clas : 2
+	},
+	{
+		name : 'Hemal',
+		age  : '24',
+		clas : 3
+	},
+	{
+		name : 'Ritu',
+		age  : '20',
+		clas : 3
+	}
+];
+
+let clas_cal = clas_num.reduce(calsFun,0);
+
+function calsFun(num,ag){
+	let demo_nam = clas_num[0].name;
+	for( let i=0; i<demo_nam.length; i++ ){
+		return num + ag.name +ag.age;
+	}
+}
+
+console.log(clas_cal);
+
+let fnum = 12;
+let lnum = 10;
+
+console.log(fnum+lnum);
+
+console.log("============================");
+
+let rabeya = [
+	{
+		name   : 'Pen',
+		amount : 5,
+		price  : 10
+	},
+	{
+		name   : 'Book',
+		amount : 5,
+		price  : 50
+	},
+	{
+		name   : 'Sampo',
+		amount : 30,
+		price  : 5
+	}
+];
+
+let rab_swet = rabeya.reduce( rbFun , 0);
+
+function rbFun( acc, intval ){
+	return acc + (intval.amount * intval.price);
+}
+
+console.log(rab_swet);
+console.log('==========================');
+
+let odd_num = [1,2,3,4,5];
+let odd_num_red = odd_num.reduce( (acc,intval) => {
+	return acc+intval;
+} );
+
+console.log(odd_num_red);
+console.log('==========================');
+
+let res_food = ['Pizza','Burgar','Grill'];
+console.log(res_food.indexOf('Burgar') == 1);
+console.log('==========================');
+
+let ABC = [
+	{
+		name : 'Abc',
+		age  : 40
+	},
+	{
+		name : 'অ,আ,ই',
+		age  : 20
+	},
+	{
+		name : 'ক,খ,গ',
+		age  : 30
+	}
+];
+
+let find_abc = ABC.find( s => {
+	return s.age == 30
+} );
+
+console.log(find_abc);
+console.dir(document);
+console.dir(document.URL);
+console.dir(document.all);
+
 
 /*
 	Conditional, Control Flows( if , else )
